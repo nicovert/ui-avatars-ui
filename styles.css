@@ -1,0 +1,68 @@
+#root {
+	display: flex;
+	justify-content: center;
+}
+
+.dark {
+	background-color: #282828;
+	color: #ffffff;
+}
+
+.headerTitle {
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+.headerOptions {
+	height: 20px;
+	margin-bottom: 10px;
+}
+
+#inputPassword {
+	width: 200px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#buttonRefresh {
+	width: 208px;
+	margin-top: 20px;
+}
+
+.content {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.options {
+	width: 50%;
+}
+
+.option {
+	margin-bottom: 20px;
+	align-items: center;
+}
+
+.optionLine {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 18px;
+	margin-bottom: 5px;
+}
+
+.optionText {
+	padding-right: 10px;
+	text-wrap: nowrap;
+}
+
+.optionInput {
+	height: 16px;
+}
+
+.optionInputNum {
+	height: 16px;
+	width: 50px;
+}

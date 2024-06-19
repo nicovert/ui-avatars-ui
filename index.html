@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=0.86"
+		/>
+		<meta name="description" content="Nico Covert · nicovert" />
+		<title>Initial Contact</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body id="root">
+		<div class="content">
+			<h1 class="headerTitle">Initial Contact</h1>
+			<img id="image" />
+			<input type="button" id="buttonRefresh" value="Refresh" />
+			<h4 class="headerOptions">Options</h4>
+			<div class="options">
+				<div class="option">
+					<div class="optionLine">
+						<p class="optionText">Name</p>
+						<input id="name" class="optionInput" value="John Doe" />
+					</div>
+				</div>
+				<div class="option">
+					<div class="optionLine">
+						<p class="optionText">Image Size (16-512)</p>
+						<input
+							type="number"
+							id="size"
+							class="optionInputNum"
+							min="16"
+							max="512"
+							value="64"
+						/>
+					</div>
+				</div>
+				<div class="option">
+					<div class="optionLine">
+						<p class="optionText">Font Size (0.1-1)</p>
+						<input
+							type="number"
+							id="fontSize"
+							class="optionInputNum"
+							min="0.1"
+							max="1"
+							value="0.5"
+							step="0.1"
+						/>
+					</div>
+				</div>
+				<div class="option">
+					<div class="optionLine">
+						<p class="optionText">Number of Initials</p>
+						<input
+							type="number"
+							id="length"
+							class="optionInputNum"
+							min="1"
+							value="2"
+						/>
+					</div>
+				</div>
+
+				<div class="option">
+					<div class="optionLine">
+						<p>Rounded</p>
+						<input type="checkbox" id="checkRounded" />
+					</div>
+				</div>
+
+				<div class="option">
+					<div class="optionLine">
+						<p>Bold</p>
+						<input type="checkbox" id="checkBold" />
+					</div>
+				</div>
+
+				<div class="option">
+					<div class="optionLine">
+						<p>Uppercase</p>
+						<input type="checkbox" id="checkUppercase" checked />
+					</div>
+				</div>
+
+				<div class="option">
+					<div class="optionLine">
+						<p class="optionText">Background Color</p>
+						<input
+							id="background"
+							class="optionInput"
+							value="0060DF"
+						/>
+					</div>
+				</div>
+
+				<div class="option">
+					<div class="optionLine">
+						<p class="optionText">Font Color</p>
+						<input id="color" class="optionInput" value="ffffff" />
+					</div>
+				</div>
+
+				<div class="option">
+					<div class="optionLine">
+						<p>SVG</p>
+						<input type="checkbox" id="checkFormat" checked />
+					</div>
+				</div>
+
+				<div class="option">
+					<div class="optionLine">
+						<p>Dark</p>
+						<input type="checkbox" id="checkDark" checked />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="script.js"></script>
+</html>
