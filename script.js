@@ -3,7 +3,19 @@ const refreshImage = () => {
 	const options = getOptionsObject();
 	setCookie(options);
 	const imageURL = generate(options);
-	document.getElementById("image").src = imageURL;
+
+	const svg = document.getElementById('svgRender');
+	svg.src = imageURL;
+	svg.onload = () => {
+		// Get the canvas and its context
+      	const canvas = document.getElementById('canvasRender');
+      	const ctx = canvas.getContext('2d');
+      	// Set the canvas dimensions to the SVG image dimensions
+      	canvas.width = svg.width;
+      	canvas.height = svg.height;
+      	// Draw the SVG image onto the canvas
+      	ctx.drawImage(svg, 0, 0);
+	}
 };
 
 const getOptionsObject = () => {
@@ -39,9 +51,17 @@ const generate = (options) => {
 		format = true,
 	} = options;
 
-	const urlParams = `?name=${name}&size=${size}&font-size=${fontSize}&length=${length}&rounded=${rounded}&bold=${bold}&uppercase=${uppercase}&background=${background}&color=${color}&format=${
-		format ? "svg" : "png"
-	}`;
+	if (format) {
+		//Set SVG to display, hide canvas
+		document.getElementById("svgRender").style.display = "initial";
+		document.getElementById("canvasRender").style.display = "none";
+	} else {
+		//Set canvas to display, hide SVG
+		document.getElementById("svgRender").style.display = "none";
+		document.getElementById("canvasRender").style.display = "initial";
+	}
+
+	const urlParams = `?name=${name}&size=${size}&font-size=${fontSize}&length=${length}&rounded=${rounded}&bold=${bold}&uppercase=${uppercase}&background=${background}&color=${color}&format=svg`;
 
 	return `https://ui-avatars.com/api/${urlParams}`;
 };
